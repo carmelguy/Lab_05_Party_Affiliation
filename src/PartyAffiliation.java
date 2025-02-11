@@ -1,15 +1,26 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-public class Main {
-    public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+import java.util.Scanner;
+public class PartyAffiliation
+{
+    public static void main(String[] args)
+    {
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        Scanner in = new Scanner(System.in);
+        String party;
+
+        System.out.print("Enter your party affiliation (D, R, I): ");
+        party = in.nextLine();
+
+        if (party.equalsIgnoreCase("D")) {
+            System.out.println("You get a Democratic Donkey.");
+        } else if (party.equalsIgnoreCase("R")) {
+            System.out.println("You get a Republican Elephant.");
+        } else if (party.equalsIgnoreCase("I")) {
+            System.out.println("You get an Independent Person.");
+        } else {
+            System.out.println("Other");
+                }
+
+
+
     }
 }
